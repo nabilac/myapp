@@ -5,6 +5,7 @@ import { Route, NavLink, HashRouter } from "react-router-dom";
 import YouTubeComp from '../YouTubeComp/YouTubeComp';
 import Product from '../Product/Product';
 import LifeCycleComp from '../LifeCycleComp/LifeCycleComp';
+import BlogPost from '../BlogPost/BlogPost';
 
 import { Provider } from 'react-redux';
 import store from '../../store';
@@ -75,6 +76,9 @@ class Home extends Component {
                                 <li>
                                     <NavLink to="/youtube">youtube</NavLink>
                                 </li>
+                                <li>
+                                    <NavLink to="/blogPost">blogPost</NavLink>
+                                </li>
                             </ul>
                             <div>
                                 <Route path="/lifeCycle">
@@ -85,6 +89,9 @@ class Home extends Component {
                                 </Route>
                                 <Route path="/youtube">
                                     <YouTubeComp />
+                                </Route>
+                                <Route path="/blogPost">
+                                    <BlogPost />
                                 </Route>
                             </div>
                         </div>
