@@ -107,19 +107,13 @@ class BlogPost extends Component {
         return (
             <>
                 <p className="section-title">Halaman Blog Post</p>
-
-                <div>
-                    <div>
-                        <label>Title</label>
-                        <input type="text" name="title" value={this.state.form.title} onChange={this.handleChange} />
-                    </div>
-                    <div>
-                        <label>Body</label>
-                        <input type="text" name="body" value={this.state.form.body} onChange={this.handleChange} />
-                    </div>
-                    <div>
-                        <button onClick={this.handleSubmit}>Submit</button>
-                    </div>
+                <hr/>
+                <div className="form-add-post">
+                    <label>Title</label>
+                    <input type="text" name="title" value={this.state.form.title} onChange={this.handleChange} />
+                    <label>Body</label>
+                    <textarea type="text" cols="30" rows="10" name="body" value={this.state.form.body} onChange={this.handleChange} />
+                    <button className="btn-submit" onClick={this.handleSubmit}>Submit</button>
                 </div>
 
                 {
